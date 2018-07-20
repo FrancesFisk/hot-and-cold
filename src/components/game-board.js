@@ -9,9 +9,11 @@ export default class GameBoard extends Component  {
       userGuess: ''
     }
   }
-    submitValue() {
+    submitValue(e) {
+      e.preventDefault();
       console.log(this.state);
     }
+
   render() {
     return (
       <div>
@@ -20,11 +22,9 @@ export default class GameBoard extends Component  {
         <CurrentGuess 
           setChange={userGuess => this.setState({userGuess})} 
           setValue={this.state.userGuess}
-          submitValue={e => this.submitValue()}/>
-        {/* Enter your guess */}
-        {/* Submit button */}
+          useSubmitValue={e => this.submitValue(e)}/>
         {/* Number of guesses */}
-        {/* History of guesses */}
+        
       </div>
     );
   }
