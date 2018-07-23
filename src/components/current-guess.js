@@ -2,7 +2,6 @@ import React from 'react';
 import GuessHistory from './guess-history';
 
 export default function CurrentGuess(props) {
-
     return (
       <div>
         <form onSubmit={e => props.useSubmitValue(e)}>
@@ -13,6 +12,7 @@ export default function CurrentGuess(props) {
             />
           <button type="submit">Guess</button>
         </form>
+        diffElem
       </div>
     );
 }
